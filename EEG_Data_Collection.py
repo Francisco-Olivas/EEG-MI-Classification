@@ -45,7 +45,7 @@ vfases = [
 class open_Subject(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi("PantallaSujeto3.ui", self)
+        uic.loadUi("SubjectScreen.ui", self)
         self.stackw = self.findChild(QStackedWidget, "stackedWidget")
         self.label_6 = self.findChild(QLabel, "label_6")
         self.label_8 = self.findChild(QLabel, "label_8")
@@ -56,7 +56,7 @@ class UI(QMainWindow):
     def __init__(self):
         super(UI, self).__init__()
 
-        uic.loadUi("PantallaInicial.ui", self)
+        uic.loadUi("InitialScreen.ui", self)
 
         self.bCerrar = self.findChild(QPushButton, "bCerrar")
         self.bIniciar = self.findChild(QPushButton, "bIniciar")  # Iniciar Prueba
@@ -358,3 +358,4 @@ try:
 finally:
     if board_shim.is_prepared():
         board_shim.release_session()
+
